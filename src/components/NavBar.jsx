@@ -1,6 +1,6 @@
 import React from 'react';
 import imgLogo from "../assets/img/logo.png"
-import carWitget from "../assets/img/cart3.svg"
+import CartWidget from './CartWidget/CartWidget';
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap";
 function NavBar() {
@@ -35,7 +35,7 @@ function NavBar() {
                             <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
-                    <img width="50" src={carWitget} alt="Carito de Compras"/>
+                    <CartWidget />
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-success" type="submit">Buscar</button>
