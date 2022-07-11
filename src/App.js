@@ -13,7 +13,7 @@ function App() {
       <NavBar />
       <ItemListContainer titulo="Hola Mundo"/>
       <hr/>
-      <ItemCount stock={5} initial={1} />
+      <ItemCount stock={10} initial={1} />
 
     </div>
   );
