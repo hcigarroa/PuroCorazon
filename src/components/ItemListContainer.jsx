@@ -1,13 +1,84 @@
-import React from "react"
+import React, {useState, useEffect } from "react";
 
-function ItemListContainer({titulo}) {
-    return (
-        <div className="container px-5 py-8 mx-auto">
-            <div className="flex flex-col text-center w-ful mb-12">
-                <h1 className="sm:text-3x1 text-2x1 font-bold title-font mb">Comprar</h1>
-            </div>
-        </div>
-    );
-}
 
-export default ItemListContainer
+function ItemListContainer(props) {
+    const ItemDataBase = [
+        {
+            sku: 5534,
+            Material: "Cemento",
+            Precio: 750,
+            stock: 100,
+            img:""
+            
+            }, {
+            sku: 5807,
+            Material: "Papel",
+            Precio: 150,
+            stock: 10,
+            img:""
+            }, {
+            sku: 5798,
+            Material: "Papel",
+            Precio: 150,
+            stock: 10,
+            img:""
+            }, {
+            sku: 5427,
+            Material: "Papel",
+            Precio: 150,
+            stock: 10,
+            img:""
+            }, {
+            sku: 5881,
+            Material: "Cemento",
+            Precio: 1750,
+            stock: 100,
+            img:""
+            }, {
+            sku: 5353,
+            Material: "Papel",
+            Precio: 150,
+            stock: 10,
+            img:""
+            }, {
+            sku: 5579,
+            Material: "Cemento",
+            Precio: 1850,
+            stock: 100,
+            img:""
+            }, {
+            sku: 5505,
+            Material: "Madera",
+            Precio: 250,
+            stock: 50,
+            img:""
+            }, {
+            sku: 5615,
+            Material: "Ceramica",
+            Precio: 1250,
+            stock: 100,
+            img:""
+            }, {
+            sku: 5623,
+            Material: "Cemento",
+            Precio: 1350,
+            stock: 100,
+            img:""
+        }
+        ];
+    let promiseItems = new Promise ( (resolve, reject) => {
+        setTimeout(
+            () => {
+                resolve(ItemDataBase);
+            },
+        1000);
+        });
+
+
+    promiseItems.then(
+        (respuesta) => {
+
+        } 
+    )
+    }
+export default ItemListContainer;

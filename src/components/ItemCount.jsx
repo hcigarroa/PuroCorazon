@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import { propTypes } from "react-bootstrap/esm/Image";
+import { propsTypes } from "react-bootstrap/esm/Image";
 
 function ItemCount() {
     const [count, setCount] = useState(1);
 
 function handleAdd(){
+    setCount(count + 1);
     if(count < props,stock){
-        setCount(count + 1)};
-
-    
+        setCount(prev => prev + 1)};
 }
 
 function handleSubstaract(){
-    setCount(count - 1)
+    if (count > 0) setCount(prev => prev - 1)
 }
+
 
 function handlebuy (){
 }
@@ -35,6 +35,6 @@ function handlebuy (){
             </div>
         </div>
     );
-}
 
+}
 export default ItemCount
