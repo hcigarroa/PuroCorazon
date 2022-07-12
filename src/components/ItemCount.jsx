@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { propsTypes } from "react-bootstrap/esm/Image";
 
-function ItemCount() {
+function ItemCount(props) {
     const [count, setCount] = useState(1);
 
 function handleAdd(){
     setCount(count + 1);
-    if(count < props,stock){
+    if(count < props.stock){
         setCount(prev => prev + 1)};
 }
 
