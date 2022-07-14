@@ -1,4 +1,5 @@
 import React, {useState, useEffect } from "react";
+import itemList from "./itemList";
 
 
 function ItemListContainer(props) {
@@ -65,20 +66,32 @@ function ItemListContainer(props) {
             stock: 100,
             img:""
         }
-        ];
-    let promiseItems = new Promise ( (resolve, reject) => {
+    ];
+    let [items, setItems] = useState([]);
+
+useEffect(
+    () => {
+    let promiseItems = new Promise((resolve, reject) => {
         setTimeout(
-            () => {
-                resolve(ItemDataBase);
-            },
-        1000);
+          () => {
+              resolve(ItemDataBase);
+          },
+        2000);
         });
 
-
     promiseItems.then(
-        (respuesta) => {
-
+      (respuesta) => {
+          setItems(ItemDataBase);
         } 
-    )
-    }
+      ).catch(
+        (errorMsg) => console.error(errorMsg)
+      )
+    },
+    []
+)
+
+    return (
+        <itemList items={items}/>
+    );
+}
 export default ItemListContainer;

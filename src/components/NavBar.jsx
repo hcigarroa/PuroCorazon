@@ -25,7 +25,8 @@ function NavBar() {
                                 Productos
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a className="dropdown-item" href="#">Cerámica</a></li>
+                                <li><a className="dropdown-item" href="../secciones/ceramica/ceramica.jsx">Cerámica</a></li>
+                                <li><a className="dropdown-item" href="#">Cemento</a></li>
                                 <li><a className="dropdown-item" href="#">Madéra</a></li>
                                 <li><hr className="dropdown-divider" /></li>
                                 <li><a className="dropdown-item" href="#">Arreglos</a></li>
