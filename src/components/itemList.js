@@ -1,9 +1,10 @@
 import React from "react";
 
+
 function itemList(props) {
     console.log("Render itemList", props.item)
     return (
-        <>
+        <div>
         <div>itemList</div>
          {
             props.item.map(
@@ -16,7 +17,7 @@ function itemList(props) {
                 }
             )
          }
-        </>
+        </div>
        
     );
 } 

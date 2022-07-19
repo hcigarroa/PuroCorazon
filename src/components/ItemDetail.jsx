@@ -1,7 +1,6 @@
 import React from "react";
-import "./item.css";
-import {default as ItemCount} from "../itemcount/itemcount"
-import {default as ItemDescriptionContainer } from "../ItemDescriptionContainer/ItemDescriptionContainer"
+import {default as ItemCount} from "../components/ItemCount"
+import {default as ItemDescriptionContainer } from "../components/itemDetailContainer"
 const Item = (props) => {
   let stock = props.data.stock
     return (
@@ -19,7 +18,7 @@ const Item = (props) => {
   );
 }
 
-export default function Item({detail}) {
+export default function ItemDetail({detail}) {
 
   const {sku, material, precio, img } = detail
 }
