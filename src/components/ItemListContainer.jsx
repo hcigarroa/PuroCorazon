@@ -2,7 +2,7 @@ import React, {useState, useEffect } from "react";
 import itemList from "./itemList";
 
 
-function ItemListContainer(props) {
+function ItemListContainer() {
     const ItemDataBase = [
         {
             sku: 5534,
@@ -74,7 +74,7 @@ useEffect(
     let promiseItems = new Promise((resolve, reject) => {
         setTimeout(
           () => {
-              resolve(ItemDataBase);
+            resolve(ItemDataBase);
           },
         2000);
         });
