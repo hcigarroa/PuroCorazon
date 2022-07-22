@@ -1,8 +1,7 @@
-import React from 'react';
 import imgLogo from "../assets/img/logo.png"
 import CartWidget from './CartWidget/CartWidget';
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap";
+// import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap";
 import { Link } from "react-router-dom";
 
 function NavBar() {
@@ -10,7 +9,7 @@ function NavBar() {
         <><nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                 <img width="100" src={imgLogo} alt="Logo PuroCorazon"/>
-                <a className="navbar-brand" href="">Puro Corazón</a>
+                <Link className="navbar-brand" to={"/"}>Puro Corazón</Link>
                 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

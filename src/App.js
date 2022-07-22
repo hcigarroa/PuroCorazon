@@ -1,11 +1,13 @@
 import React from 'react';
 import "./App.css";
 import ItemListContainer from "./components/ItemListContainer";
+import Item from "./components/Item";
+
 import NavBar from "./components/NavBar";
 import ItemCount from "./components/ItemCount";
 import 'bootstrap';
 import "bootstrap/dist/css/bootstrap.css";
-import ItemDetailContainer from "./components/itemDetailContainer"
+import ItemDetailContainer from "./components/ItemDetailContainer"
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 

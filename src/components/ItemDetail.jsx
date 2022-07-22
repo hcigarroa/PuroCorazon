@@ -1,6 +1,7 @@
 import React from "react";
 import {default as ItemCount} from "../components/ItemCount"
-import {default as ItemDescriptionContainer } from "../components/itemDetailContainer"
+import { useNavigate, Link } from "react-router-dom";
+
 const Item = (props) => {
   let stock = props.data.stock
     return (

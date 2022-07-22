@@ -1,19 +1,19 @@
-import React from "./item";
+import Item from "./Item.jsx";
 
-const itemList = ({items}) => {
+const ItemList = ({ items }) => {
     return (
         <div className="container">
          <div className="row">
-          {items.map((cadaItem) => (
-             <div key={cadaItem.id} className="col-sm">
-                <p>{cadaItem.Material}</p>
-                <p>{cadaItem.Precio}</p>
+          {items.map((item) => (
+             <div key={Item.id} className="col-sm">
+                <p>{item.Material}</p>
+                <p>{item.Precio}</p>
+                <Item item={item} />
             </div>
             ))}
-         </div>
         </div>
-       
+        </div>
     );
 }; 
 
-export default itemList;
+export default ItemList;

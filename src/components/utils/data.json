@@ -11,60 +11,67 @@
       "Material": "Papel",
       "Precio": 150,
       "stock": 10,
-      "pictureUrl":""
+      "pictureUrl":"../src/assets/Separador 1.png"
       },
       {
       "id": 5798,
       "Material": "Papel",
       "Precio": 150,
       "stock": 10,
-      "pictureUrl":""
+      "pictureUrl":"../src/assets/Separador 2.png"
       },
       {
       "id": 5427,
       "Material": "Papel",
       "Precio": 150,
       "stock": 10,
-      "pictureUrl":""
+      "pictureUrl":"../src/assets/Separador 3.png"
       }, {
       "id": 5881,
       "Material": "Cemento",
       "Precio": 1750,
       "stock": 100,
-      "pictureUrl":""
+      "pictureUrl":"../src/assets/Maceta2.png"
       }, {
       "id": 5353,
-      "Material": "Papel",
-      "Precio": 150,
+      "Material": "Madera",
+      "Precio": 250,
       "stock": 10,
-      "img":""
+      "img":"../src/assets/Colgante 1.png"
       },
       {
       "id": 5579,
       "Material": "Cemento",
-      "Precio": 1850,
+      "Precio": 200,
       "stock": 100,
-      "pictureUrl":""
+      "pictureUrl":"../src/assets/Maceta3.png"
       },
       {
       "id": 5505,
       "Material": "Madera",
       "Precio": 250,
       "stock": 50,
-      "pictureUrl":""
+      "pictureUrl":"../src/assets/caja1.png"
       },
       {
       "id": 5615,
-      "Material": "Ceramica",
-      "Precio": 1250,
+      "Material": "Madera",
+      "Precio": 250,
       "stock": 100,
-      "pictureUrl":""
+      "pictureUrl":"../src/assets/Colgante 3.png"
       },
       {
       "id": 5623,
-      "Material": "Cemento",
+      "Material": "Ceramica",
       "Precio": 1350,
       "stock": 100,
-      "pictureUrl":""
-  }
+      "pictureUrl":"../src/assets/Ceramica 1.png"
+      },
+      {
+      "id": 5623,
+      "Material": "Ceramica",
+      "Precio": 1350,
+      "stock": 100,
+      "pictureUrl":"../src/assets/Ceramica 2.png"
+      }
 ]
