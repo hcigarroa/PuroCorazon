@@ -2,9 +2,11 @@ import React, {useState, useEffect } from "react";
 import itemList from "./itemList";
 import ItemListContainer from "./ItemListContainer";
 import itemDetail from "./ItemDetail"
+import { Route } from "react-router-dom";
+import Item from "./item";
 
 
-function ItemDetailContainer() {
+function itemDetailContainer() {
     const ItemDataBase = [
         {
             sku: 5534,

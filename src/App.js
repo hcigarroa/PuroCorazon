@@ -6,16 +6,32 @@ import ItemCount from "./components/ItemCount";
 import 'bootstrap';
 import "bootstrap/dist/css/bootstrap.css";
 import ItemDetailContainer from "./components/itemDetailContainer"
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 
 function App() {
   return (
-    <div className='App'>
+    <div>
+      <BrowserRouter>
       <NavBar />
+      <Routes>
+        <Route index path="/" element={<ItemListContainer />} />
+        <Route path='/nav' element={<NavBar/>} />
+        <Route path="item/:id" element={<ItemDetailContainer />} />
+        <Route
+            path="*"
+            element={
+              <div style={{ backgroundColor: "red" }}> ERROR 404 NOT FOUND</div>
+            }
+          />
+          <Route path="/CartWidget" element={<div>Cart Page</div>} />
+
+      </Routes>
       <ItemListContainer titulo="Hola Mundo"/>
       <hr/>
       <ItemCount stock={10} initial={1} />
       <ItemDetailContainer />
+      </BrowserRouter>
 
     </div>
   );
