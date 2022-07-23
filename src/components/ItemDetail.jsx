@@ -3,9 +3,13 @@ import {default as ItemCount} from "../components/ItemCount"
 import { useNavigate, Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Item from "./Item";
 
-function BasicExample() {
+const ItemDetail  = ({ item }) => {
+  const [amount, setAmount] = useState(0);
+  const {precio, stock, material, pictureUrl, id} = item;
+  const onAdd = (amount) => {
+  setAmount(amount);
+  }; 
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="holder.js/100px180" />
@@ -19,9 +23,9 @@ function BasicExample() {
       </Card.Body>
     </Card>
   );
-}
+};
 
-export default BasicExample;
+export default ItemDetail;
 
 //  const ItemDetail = ({item}) => {
 //    const [amount, setAmount] = useState(0);

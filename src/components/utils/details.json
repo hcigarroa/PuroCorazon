@@ -4,14 +4,17 @@
     "Material": "Cemento",
     "Precio": 750,
     "stock": 100,
+    "Medidads": "15 x 15 x 15 CM",
+    "Tecnica": "hecho a mano",
     "pictureUrl":"../src/assets/Maceta1.png"
-    
     },
     {
     "id": 5807,
     "Material": "Papel",
     "Precio": 150,
     "stock": 10,
+    "Medidads":16 "x 5 CM",
+    "Tecnica": "Pintado a mano",
     "pictureUrl":"../src/assets/Separador 1.png"
     }
 ]

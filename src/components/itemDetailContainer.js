@@ -8,6 +8,7 @@ const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
   const [loading, setLoading] = useState(false);
   const params = useParams();
+  
   const promise = new Promise((res, rej) =>{
     setTimeout(() => res(detailledItems), 2000);
   });
