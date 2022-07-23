@@ -1,14 +1,9 @@
-import React from 'react';
 import "./App.css";
-import ItemListContainer from "./components/ItemListContainer";
-import Item from "./components/Item.jsx";
 import NavBar from "./components/NavBar";
-import ItemCount from "./components/ItemCount";
-import 'bootstrap';
-import "bootstrap/dist/css/bootstrap.css";
+import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer"
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-
+import Item from "./components/Item";
 
 function App() {
   return (
@@ -16,24 +11,19 @@ function App() {
       <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route index path="/" element={<ItemListContainer />} />
+        <Route index element={<ItemListContainer />} />
         <Route path='/nav' element={<NavBar/>} />
-        <Route path="item/:id" element={<ItemDetailContainer />} />
+        <Route path="Item/:id" element={<ItemDetailContainer />} />
         <Route
             path="*"
             element={
               <div style={{ backgroundColor: "red" }}> ERROR 404 NOT FOUND</div>
             }
           />
-          <Route path="/CartWidget" element={<div>Cart Page</div>} />
-
+          {/* <Route path="/CartWidget" element={<div>Cart Page</div>} /> */}
+          <Route path="cart" element={<div>Cart Page</div>} />
       </Routes>
-      <ItemListContainer titulo="Hola Mundo"/>
-      <hr/>
-      <ItemCount stock={10} initial={1} />
-      <ItemDetailContainer />
       </BrowserRouter>
-
     </div>
   );
 }

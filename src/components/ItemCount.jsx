@@ -1,40 +1,59 @@
-import React, { useState } from "react";
-import { propsTypes } from "react-bootstrap/esm/Image";
+import { useState } from "react";
 
-function ItemCount(props) {
-    const [count, setCount] = useState(1);
+const ItemCount = ({stock = 5, initial = 0, onAdd }) => {
+    const [count, setCount] = useState(initial);
+    const updateCount = (op) => {
+        if (op === "-" && count > 0) {
+        setCount(count - 1);
+        }
+        if (op === "+" && count < stock) {
+        setCount(count + 1);
+        }
+        };
+        const updateCountInput = (e) => {
+        const { value } = e.target;
+        if (value <= stock) {
+            setCount(isNaN(value) ? 0 : parseInt(value));
+        }
+        };
 
-function handleAdd(){
-    setCount(count + 1);
-    if(count < props.stock){
-        setCount(prev => prev + 1)};
-}
-
-function handleSubstaract(){
-    if (count > 0) setCount(prev => prev - 1)
-}
-
-
-function handlebuy (){
-}
-
-    return (
-        <div class="container px-5 py-8 mx-auto">
-            <div class="flex flex-col text-center w-ful mb-12">
-                <h1 class="sm:text-3x1 text-2x1 font-bold title-font mb-4">Compra tus Productos</h1>
-                <div>
-                    <div>
-                    <button onClick={handleSubstaract}>-</button>
-                    <span>   {count}   </span>
-                    <button onClick={handleAdd}>+</button>
-                    </div>
-                    <div>
-                        <button onClick={handlebuy}>Agrega al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-
-}
-export default ItemCount
+        return (
+            <>
+              <div className="input-group input-spinner mb-3 d-flex justify-content-center">
+                <input
+                  onChange={(e) => updateCountInput(e)}
+                  className="border-primary"
+                  placeholder=""
+                  value={count}
+                  type="number"
+                />
+                <button
+                  onClick={() => updateCount("-")}
+                  className="btn btn-icon btn-primary"
+                  type="button"
+                >
+                  -
+                </button>
+                <button
+                  onClick={() => updateCount("+")}
+                  className="btn btn-icon btn-primary"
+                  type="button"
+                >
+                  +
+                </button>
+              </div>
+              <div className="d-flex justify-content-center">
+                <button
+                  onClick={() => onAdd(count)}
+                  type="button"
+                  className="btn btn-info"
+                  disabled={count === "" || count === 0}
+                >
+                  Comprar!
+                </button>
+              </div>
+            </>
+          );
+        };
+        
+        export default ItemCount;

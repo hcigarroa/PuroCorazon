@@ -17,7 +17,7 @@ useEffect(() => {
     promise.then((res) => { 
       const products = res;
       if (name) {
-        setItems(products.filter((prodct) => prodct.id));
+        setItems(products.filter((prodct) => prodct.id == ));
       } else {
         setItems (products);
       }

@@ -4,9 +4,10 @@ import CartWidget from './CartWidget/CartWidget';
 // import "bootstrap";
 import { Link } from "react-router-dom";
 
-function NavBar() {
+const NavBar = () => {
     return (
-        <><nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                 <img width="100" src={imgLogo} alt="Logo PuroCorazon"/>
                 <Link className="navbar-brand" to={"/"}>Puro Corazón</Link>
@@ -27,11 +28,11 @@ function NavBar() {
                                 Productos
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a className="dropdown-item" href=""><Link to={"/Ceramica"}>Ceramica</Link></a></li>
-                                <li><a className="dropdown-item" href=""><Link to={"/Cemento"}>Cemento</Link></a></li>
-                                <li><a className="dropdown-item" href=""><Link to={"/Madera"}>Madéra</Link></a></li>
+                                <li><a className="dropdown-item" href=""><Link to={"productos/Ceramica"}>Ceramica</Link></a></li>
+                                <li><a className="dropdown-item" href=""><Link to={"productos/Cemento"}>Cemento</Link></a></li>
+                                <li><a className="dropdown-item" href=""><Link to={"productos/Madera"}>Madéra</Link></a></li>
                                 <li><hr className="dropdown-divider" /></li>
-                                <li><a className="dropdown-item" href=""><Link to={"/Arreglos"}>Arreglos</Link></a></li>
+                                <li><a className="dropdown-item" href=""><Link to={"productos/Arreglos"}>Arreglos</Link></a></li>
                             </ul>
                         </li>
                         {/* <li className="nav-item">
@@ -45,7 +46,8 @@ function NavBar() {
                     </form>
                 </div>
             </div>
-        </nav></>
+        </nav>
+        </>
     );
 }
 

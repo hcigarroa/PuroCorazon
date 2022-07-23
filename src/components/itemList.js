@@ -6,8 +6,8 @@ const ItemList = ({ items }) => {
          <div className="row">
           {items.map((item) => (
              <div key={Item.id} className="col-sm">
-                <p>{item.Material}</p>
-                <p>{item.Precio}</p>
+                {/* <p>{item.Material}</p>
+                <p>{item.Precio}</p> */}
                 <Item item={item} />
             </div>
             ))}
