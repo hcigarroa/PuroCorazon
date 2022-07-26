@@ -1,7 +1,7 @@
 [
   {
     "id": 5534,
-    "Material": "Cemento",
+    "Material":"Cemento",
     "Precio": 750,
     "stock": 100,
     "Medidads": "15 x 15 x 15 CM",
@@ -13,7 +13,7 @@
     "Material": "Papel",
     "Precio": 150,
     "stock": 10,
-    "Medidads":16 "x 5 CM",
+    "Medidads": "16 x 5 CM",
     "Tecnica": "Pintado a mano",
     "pictureUrl":"../src/assets/Separador 1.png"
     }
