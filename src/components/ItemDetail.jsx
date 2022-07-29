@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import ItemCount from "./ItemCount";
 import { useNavigate, Link } from "react-router-dom";
+import { cartContext } from "../context/cartContext";
+
+const useContext = () => useContext(cartContext);
 
 const ItemDetail = ({ item }) => {
   const [amount, setAmount] = useState(0);
